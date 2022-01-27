@@ -2,12 +2,18 @@
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
+
     public float speed;
     public float turnSpeed;
 
     private float verticalInput;
     private float horizontalInput;
 
+    private void Start()
+    {
+        instance = this;
+    }
     private void Update()
     {
         GetInput();
