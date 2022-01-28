@@ -3,6 +3,8 @@ using TMPro;
 
 public class CarSelector : MonoBehaviour
 {
+    public bool isBus = false;
+
     public PlayerController carToSpawn; 
 
     private bool canSelect;
@@ -23,6 +25,7 @@ public class CarSelector : MonoBehaviour
                 gameObject.SetActive(false);
 
                 CameraController.instance.player = newPlayer.transform;
+                CameraOffset();
             }
         }
     }
@@ -38,6 +41,17 @@ public class CarSelector : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             canSelect = false;
+        }
+    }
+    private void CameraOffset()
+    {
+        if (isBus)
+        {
+            CameraController.instance.firstPersonOffset = new Vector3(0, 2.3f, 2.6f);
+        }
+        else
+        {
+            CameraController.instance.firstPersonOffset = new Vector3(0, 2, 1.45f);
         }
     }
 }

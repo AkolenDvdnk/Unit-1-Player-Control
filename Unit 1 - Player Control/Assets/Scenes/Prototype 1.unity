@@ -851,7 +851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67fbfea77d6a3c040bb708d3246dcfe3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToSpawn: 0.7
+  timeToSpawn: 0.8
   destroyTime: 9
   vehicle: {fileID: 126218, guid: da59e5a3713884d4f9e9667c2befa1a4, type: 3}
   points:
@@ -1153,7 +1153,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 25, y: 0, z: 0}
 --- !u!114 &534669906
 MonoBehaviour:
@@ -1168,6 +1168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1219023531}
+  firstPersonOffset: {x: 0, y: 2, z: 1.45}
 --- !u!1 &551993765
 GameObject:
   m_ObjectHideFlags: 0
@@ -1178,6 +1179,7 @@ GameObject:
   m_Component:
   - component: {fileID: 551993767}
   - component: {fileID: 551993766}
+  - component: {fileID: 551993768}
   m_Layer: 0
   m_Name: END
   m_TagString: Untagged
@@ -1206,12 +1208,24 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 551993765}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 11.66, y: 5.49, z: 319.17}
+  m_LocalPosition: {x: 11.66, y: 5.49, z: 332.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &551993768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551993765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8fb8ae3606c22e41a97fe6ed9265db7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &563852739
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6444,6 +6458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07dbeac68765d544cb9be2883afe4dd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBus: 0
   carToSpawn: {fileID: 3587997531453433337, guid: 6670b0f9cbb61a543a1198144b6a710b,
     type: 3}
 --- !u!65 &4010496095985630223
@@ -7249,6 +7264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07dbeac68765d544cb9be2883afe4dd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBus: 1
   carToSpawn: {fileID: 3647132916208874918, guid: c31cce249c853b04cb9966f29627a1b1,
     type: 3}
 --- !u!65 &8289061598499421765
