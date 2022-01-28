@@ -17,6 +17,9 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         GetInput();
+    }
+    private void FixedUpdate()
+    {
         MoveVihicle();
     }
     private void GetInput()
