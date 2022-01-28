@@ -23,11 +23,22 @@ public class CameraController : MonoBehaviour
             pressed = !pressed;
         }
     }
+    private void Update()
+    {
+        Quit();
+    }
     private Vector3 CameraOffset()
     {
         if (pressed)
             return firstPersonOffset;
         else
             return thirdPersonOffset;
+    }
+    private void Quit()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 }
